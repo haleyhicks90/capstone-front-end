@@ -1,36 +1,27 @@
-// =========================
-// Dependencies
-// =========================
-import './App.css';
+// ========================= Dependencies ========================= //
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import './App.css';
 
-// =========================
-// Components Import
-// =========================
+
+// ========================= Components Import ========================= //
 import Character from './components/Character'
 import Create from './components/Create'
+import Edit from './components/Edit'
 
 
-// =========================
-// App component
-// =========================
+// ========================= App component ========================= //
 const App = () => {
 
-// =========================
-// State
-// =========================
+// ========================= State ========================= //
     let [characters, setCharacters] = useState([])
 
-// =========================
-// Event Handlers
-// =========================
-
+// ========================= Event Handlers ========================= //
 // Create
     const handleCreate = (addCharacter) => {
         console.log(addCharacter);
         axios
-            .post('https://downtondb-back.herokuapp.com', addCharacter)
+            .post('https://downtondb-back.herokuapp.com/characters', addCharacter)
             .then((response) => {
                 console.log(response)
                 getCharacters()
@@ -41,7 +32,7 @@ const App = () => {
 // // Delete
 //     const handleDelete = (event) => {
 //         axios
-//             .delete(`https://downtondb-back.herokuapp.com/${event.target.value}`)
+//             .delete(`https://downtondb-back.herokuapp.com/characters/${event.target.value}`)
 //             .then((response) => {
 //                 getCharacters()
 //             })
@@ -51,7 +42,7 @@ const App = () => {
 //     const handleUpdate = (editCharacter) => {
 //         console.log(editCharacter)
 //         axios
-//             .put(`https://downtondb-back.herokuapp.com/${editCharacter.id}`, editCharacter)
+//             .put(`https://downtondb-back.herokuapp.com/characters/${editCharacter.id}`, editCharacter)
 //             .then((response) => {
 //                 getCharacters()
 //             })
@@ -60,27 +51,26 @@ const App = () => {
 // Read
     const getCharacters = () => {
         axios
-            .get('https://downtondb-back.herokuapp.com')
+            .get('https://downtondb-back.herokuapp.com/characters')
             .then(
                 (response) => setCharacters(response.data),
                 (error) => console.log(error)
             )
-            .catch((error) => console.log(error))
+            .catch((error) => console.error(error))
     }
 
-// =========================
-// Use Effect
-// =========================
     useEffect(() => {
         getCharacters()
     }, [])
 
-// =========================
-// rendering to page
-// =========================
+// ========================= rendering to page ========================= //
     return (
         <>
-            <Character />
+            {/*<Character character={ character }/>*/}
+            {/*<Character />*/}
+            <Create />
+            <Edit />
+            <h1>sup sup</h1>
         </>
     )
 }
