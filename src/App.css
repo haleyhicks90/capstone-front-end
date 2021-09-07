@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* my css below */
+/* ==================== */
+body {
+    display: flex;
+}
+/* body {
+    background-color: #5A6D8A;
+} */
+/* .container{
+	display: block;
+	grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+	grid-gap: 0.5em;
+}
+
+.card{
+	height: max-content;
+} */

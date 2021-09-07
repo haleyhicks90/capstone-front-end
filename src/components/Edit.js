@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 const Edit = (props) => {
     return (
         <>
-            <h1>Edit Component goes here</h1>
+            <h1>Edit Component</h1>
         </>
     )
 }

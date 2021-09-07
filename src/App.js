@@ -8,6 +8,7 @@ import './App.css';
 import Character from './components/Character'
 import Create from './components/Create'
 import Edit from './components/Edit'
+import NavBar from './components/NavBar'
 
 
 // ========================= App component ========================= //
@@ -63,14 +64,20 @@ const App = () => {
         getCharacters()
     }, [])
 
+    console.log(characters);
 // ========================= rendering to page ========================= //
     return (
         <>
-            {/*<Character character={ character }/>*/}
-            {/*<Character />*/}
-            <Create />
+            <Create
+                handleCreate={ handleCreate }
+            />
+            {characters.map(character => <Character character={ character } key={character._id}/>)}
+            {characters.map((character) => {
+                return (
+
+                )
+            })}
             <Edit />
-            <h1>sup sup</h1>
         </>
     )
 }
