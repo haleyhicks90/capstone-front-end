@@ -98,7 +98,7 @@ const Create = (props) => {
                             <Form.Control type='text' name='children[]' onChange={ handleChange } />
                         </FloatingLabel>
 
-                        <input class='create-submit-btn btn' variant='success' type='submit' />
+                        <input className='create-submit-btn btn' variant='success' type='submit' />
 
                     </Form>
                 </Modal.Body>

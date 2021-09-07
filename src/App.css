@@ -41,11 +41,66 @@
 /* my css below */
 /* ==================== */
 
-body {
+main {
+    background-color: #5A6D8A;
+}
+
+summary {
+    text-align: center;
+}
+
+#logo {
+    height: 380px;
+    width: 100%;
+}
+
+.m-3 {
+    background-color: floralwhite;
+}
+
+#card-container {
     display: flex;
 }
-/* body {
-    background-color: #5A6D8A;
+
+#individual-cards {
+    width: 25%;
+}
+
+/* .card.img {
+    height: 500px;
+    width: 500px;
+} */
+
+.card-footer {
+    display: block;
+    align-items: center;
+}
+
+#create-details {
+    display: inline;
+}
+
+.footer {
+    background-color: #DBC900;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.social-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 5px;
+}
+/* .field.is-grouped {
+    display: block;
+} */
+
+/* #edit_form {
+    margin: auto;
 } */
 /* .container{
 	display: block;
