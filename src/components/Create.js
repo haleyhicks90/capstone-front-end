@@ -80,10 +80,6 @@ const Create = (props) => {
                             <Form.Control type='number' name='num_of_eps' onChange={ handleChange } />
                         </FloatingLabel>
 
-                        <FloatingLabel label='Quotes' className='mb-3'>
-                            <Form.Control type='text' name='quotes[]' onChange={ handleChange } />
-                        </FloatingLabel>
-
                         <FloatingLabel label="Spouse's Name" className='mb-3'>
                             <Form.Control type='text' name='spouse_first_name' onChange={ handleChange } />
                             <Form.Control type='text' name='spouse_last_name' onChange={ handleChange } />

@@ -22,7 +22,6 @@ const App = () => {
     const [newDod, setNewDod] = useState('')
     const [newTitle, setNewTitle] = useState('')
     const [newNumOfEps, setNewNumOfEps] = useState(0)
-    const [newQuote, setNewQuote] = useState('')
     const [newSpouseFirstName, setNewSpouseFirstName] = useState('')
     const [newSpouseLastName, setNewSpouseLastName] = useState('')
     const [newSpouseNée, setNewSpouseNée] = useState('')
@@ -73,10 +72,6 @@ const App = () => {
     const handleNewNumOfEps = (event) => {
     setNewNumOfEps(event.target.value)
     }
-// New Quote
-    const handleNewQuote = (event) => {
-    setNewQuote(event.target.value)
-    }
 // New Spouse First Name
     const handleNewSpouseFirstName = (event) => {
     setNewSpouseFirstName(event.target.value)
@@ -112,7 +107,6 @@ const App = () => {
                 dod: newDod,
                 title: newTitle,
                 num_of_eps: newNumOfEps,
-                quote: newQuote,
                 spouse_first_name: newSpouseFirstName,
                 spouse_last_name: newSpouseLastName,
                 spouse_née: newSpouseNée,
@@ -157,7 +151,6 @@ const App = () => {
                     dod: newDod || characterData.dod,
                     title: newTitle || characterData.title,
                     num_of_eps: newNumOfEps || characterData.num_of_eps,
-                    quote: newQuote || characterData.quote,
                     spouse_first_name: newSpouseFirstName || characterData.spouse_first_name,
                     spouse_last_name: newSpouseLastName || characterData.spouse_last_name,
                     spouse_née: newSpouseNée || characterData.spouse_née,
@@ -242,13 +235,6 @@ const App = () => {
                             </div>
 
                             <div className='field'>
-                                <label className='label'>Quotes</label>
-                                <div className='control'>
-                                    <input className='input' type='text' onChange={ handleNewQuote } />
-                                </div>
-                            </div>
-
-                            <div className='field'>
                                 <label className='label'>Spouse's First Name</label>
                                 <div className='control'>
                                     <input className='input' type='text' onChange={ handleNewSpouseFirstName } />
@@ -312,10 +298,6 @@ const App = () => {
                                             <p>Number of Episode Appearances:
                                                 <br />
                                                 { character.num_of_eps }
-                                            </p>
-                                            <p>Quotes:
-                                                <br />
-                                                { character.quote }
                                             </p>
                                             <br />
                                             <h3>Family Information</h3>
@@ -389,13 +371,6 @@ const App = () => {
                                                     <label className='label'>Number of Episode Appearances</label>
                                                     <div className='control'>
                                                         <input className='input' type='number' placeholder={ character.num_of_eps } onChange={ handleNewNumOfEps } />
-                                                    </div>
-                                                </div>
-
-                                                <div className='field'>
-                                                    <label className='label'>Quotes</label>
-                                                    <div className='control'>
-                                                        <input className='input' type='text' placeholder={ character.quote } onChange={ handleNewQuote } />
                                                     </div>
                                                 </div>
 

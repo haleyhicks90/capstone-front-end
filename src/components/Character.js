@@ -11,11 +11,6 @@ const Character = (props) => {
             <p>Date of birth: { props.character.dob }</p>
             <p>Date of death: { props.character.dod }</p>
             <p>Number of Episodes: { props.character.num_of_eps }</p>
-            <p>Quotes:
-                <li>{ props.character.quotes[0] }</li>
-                <li>{ props.character.quotes[1] }</li>
-                <li>{ props.character.quotes[2] }</li>
-            </p>
             <p>Spouse: { props.character.spouse_first_name } { props.character.spouse_last_name }</p>
             <p>née: { props.character.spouse_née }</p>
             <p>Marriage Date: { props.character.marriage_date }</p>
